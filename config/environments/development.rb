@@ -1,5 +1,6 @@
 Canine::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  ENV.update YAML.load(File.read(File.expand_path("../../application.yml", __FILE__)))
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
