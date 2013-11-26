@@ -1,12 +1,29 @@
 <!DOCTYPE html>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<!--[if !IE]><!--><html><!--<![endif]-->
 <html>
-<head>
-  <title>Canine</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8">
+	  <title>Super Dog</title>
+	  <!-- Viewport meta tag to prevent iPhone from scaling our page -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	  <!--[if lt IE 9]>
+			<%= javascript_include_tag "html5"%>
+		<![endif]-->
+
+		<!--[if IE 8]>
+		<%= javascript_include_tag "checkbox"%>
+		<![endif]-->
+		
+		<!--[if IE 6]>
+			<%= javascript_include_tag "selectivizr-min"%>js">
+		<![endif]-->
+	  <%= csrf_meta_tags %>
+	</head>
+<body lang="en">
+<%= render "layouts/top_nav" %>
 
 <%= yield %>
 
