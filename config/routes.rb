@@ -1,4 +1,6 @@
 Canine::Application.routes.draw do
+  get "static/about"
+  match "/about" => "static#about", via: :get
   resources :photos
   resources :contacts
 

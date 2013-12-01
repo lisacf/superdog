@@ -2,29 +2,32 @@
 <div id="container-header">
 	<header id="masthead" class="wrapper">
 		<div class="mhtitle">
+
 			<h1> Super Dog</h1>
 			<h2>Actor, Model & Best Friend</h2>
 		</div>
 	</header>
 </div>
 <div id="container-content">
-	<section id="videos">
-		<h1>VIDEOS</h1>
-    <ul>
-      <li><%= link_to "Swing Dancing Dog", "http://youtu.be/4eh2Ahzq4G4", target: "_blank"%></li>
-      <li><%= link_to "Alligator Impression", "http://youtu.be/B7iwv9zbhOQ", target: "_blank"%></li>
-      <li><%= link_to "Eleven Dog Tricks", "http://youtu.be/VEgWYPYmXys", target: "_blank" %></li> 
-  	</ul>
-  		<div id="video-one" class="group wrapper">
-				<object height="315" width="420"><param name="movie" value="http://www.youtube.com/v/4eh2Ahzq4G4"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/4eh2Ahzq4G4" type="application/x-shockwave-flash" width="420" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+	<div id="videos" class="heightctrl">
+		<div class="video-title group wrapper"> 
+			<%= image_tag image_aws("video-small.png") %><h1>VIDEOS</h1>
+		</div>
+    <div class="video-link">
+	    <ul>
+	      <li><a href="http://youtu.be/4eh2Ahzq4G4" target="_blank" class="image"><span>Swing Dancing Dogs</span></a></li>
+	      <li><a href="http://youtu.be/B7iwv9zbhOQ" target="_blank" class="image"><span>Alligator Impression</span></a></li>
+	      <li><a href="http://youtu.be/VEgWYPYmXys" target="_blank" class="image"><span>Eleven Dog Tricks</span></a></li>
+	  	</ul>
+	  </div>
+  	<div class="video-show">
+			<div class="video-main group wrapper">
+				<%= render 'videos' %>
 			</div>
-			<div id="video-two" class="group wrapper">
-				<object width="420" height="315"><param name="movie" value="http://www.youtube.com/v/B7iwv9zbhOQ"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/B7iwv9zbhOQ" type="application/x-shockwave-flash" width="420" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
-			</div>
-			<div id="video-three" class="group wrapper">
-				<object width="420" height="315"><param name="movie" value="http://www.youtube.com/v/VEgWYPYmXys"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/VEgWYPYmXys" type="application/x-shockwave-flash" width="420" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
-			</div>
-			<p class="group wrapper"><a href="#nav" class="top">TOP</a></p>
+		</div>
+	</div>
+	<section id="headshots">
+		<%= render 'photos'%>
 	</section>
 </div>
 
@@ -32,6 +35,7 @@
 	<%= render 'form' %>
 
 	<footer id="colophon" class="wrapper">
-		<p>©2013 all rights reserved. <a href="#nav">TOP</a></p>
+		<p>©2013 all rights reserved. </p>
 	</footer>
+	<div id="toplink"><a href="#nav">TOP</a></div>
 </div>	

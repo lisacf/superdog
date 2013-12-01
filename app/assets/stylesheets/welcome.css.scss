@@ -9,7 +9,7 @@ html {
 body {
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
-  background: #f3f4f6 url("<%= Photo.first.image_url %>") repeat 0 0;
+  background: #f3f4f6 url("sand.png") repeat 0 0;
   /* Part of Advanced Checkbox Hack for navigation */
 	-webkit-animation: bugfix infinite 1s; 
 	@-webkit-keyframes bugfix {
@@ -109,7 +109,7 @@ h6 {
 		text-decoration:none;
 	}
 	a:hover {
-		color:pink;
+		color:#b74080;
 	}
 }
 .top {
@@ -155,7 +155,7 @@ h6 {
 	label {
 		display:block;
 		padding: .2em 0.2em;
-		background: url('<%= Photo.where(name:"bonemenu")[0].image_url %>') no-repeat right center;
+		background: url('bone-menu.png') no-repeat right center;
 		text-indent: -999em;
     cursor: pointer;
     -webkit-user-select: none;  /* Chrome all / Safari all */
@@ -182,34 +182,77 @@ h6 {
  }
  /* VIDEO SECTION STYLE */
  #videos {
-	padding: .65em 0;
-	h1 {
-		color:#eee;
-		background:#333;
-		padding: 0.975em 1.3em;
+	padding-top: .65em;
+	padding-bottom:4.55em;
+	margin-bottom: 1.95em;
+	background: #333;
+	.video-title {
+		margin-bottom:0;
+		border-bottom: 1px solid #fff;
+
+		img {
+			display: inline-block;
+			float:left;
+			margin-bottom: 0em;
+			margin-left:10%;
+		}
+		h1 { 
+			display:inline-block;
+			float: left;
+			padding-bottom:0.39em;
+			margin:.65em 0em 0em 0.39em;
+			color: #eee;
+		}
 	}
-	ul {
-		list-style: none;
-		padding:0;
-		border-bottom: 1px solid #eee;
-		margin: .65em 0 .39em;
-		background: #333;
+	.video-link {
+		li {
+			width:100%;
+			border-bottom: 1px solid #eee;
+		}
+		a.image {
+			display:block;
+			height: 117px;
+			width: 100%;
+			font-size: 1.063em;
+			text-align: center;
+			font-family: "Comic Sans MS";
+			color: #fff;
+			background: url("https://s3-us-west-2.amazonaws.com/everycupcake/canineup/videoclapup.png") no-repeat center;
+			text-decoration: none;
+			span {
+				display: block;
+				width: 75px;
+				margin: 0 auto;
+				padding-top: 53px;
+			}
+
+		}
+		a.image:hover {
+			background: url("https://s3-us-west-2.amazonaws.com/everycupcake/canineup/closedclap.png") no-repeat center;
+			color:#ddd;
+		}
 	}
-	li {
-		border-top: 1px solid #eee;
+	.video-show {
+		display:none;
 	}
+
+}
+
+#toplink {
+	position:fixed;
+	left: 90%;
+	bottom:0px;
+	height:30px;
+	width:100%;
 	a {
-		display:block;
-		font-size: 1.063em;
-		color: #fff;
+		color: #eee;
 		text-decoration: none;
-		padding: 0.975em 1.3em;
-	}
-	a:hover {
-		background: #f8f8f8;
-		color:#333;
+		&:hover {
+			color:#b74080;
+		}
 	}
 }
+
  /* ******************************************
 	   Form Styles Basic Layout
 ****************************************** */
@@ -278,7 +321,7 @@ form {
 	    }
     
 	.send:hover {
-	    background: #6f6f6f;
+	    background: #b74080;
 	    }
     
 	.send:active,
@@ -286,13 +329,89 @@ form {
 	    background: #555;
 	    }
 }
+/* STYLE FOR HEADSHOT SECTION*/
+
+#photos {
+	overflow:hidden;
+	margin: 0.65em 0.65em;
+	h1 {
+		color:#fff;
+		text-shadow: black 0.1em 0.1em 0.2em;
+		padding-left:0.325em;
+	}
+	h2 {
+		color:#fff;
+		padding-bottom:0.325em;
+		text-shadow: black 0.1em 0.1em 0.2em;
+		padding-left:0.325em;
+	}
+
+	ul {
+		width:100%;
+		padding: 0;
+		margin: 0;
+	}
+	li {
+		width: 48%;
+		display:inline-block;
+		text-align: center;
+		list-style: none;
+		float: left;
+		margin-bottom:0.65em;
+		margin-left: 2%;
+		img {
+			display:inline-block;
+			max-width:100%;
+			float:left;
+			border: 2px solid #eee;
+
+		}
+	}
+	#happy-photo, #product-photo, #drama-photo, #action-photo, #comedy-photo {
+		margin-bottom:1.3em;
+		padding-bottom:1.3em;
+	}
+}
+#photo-nav {
+	width: 100%;
+	padding:0;
+	margin:0;
+	margin-left:0.98em;
+	ul {
+		display:block;
+		width:100%;
+		float:left;
+		padding:.625em;
+		li {
+			margin:0 auto;
+			text-indent: 100%;
+			width:18%;
+			display:inline-block;
+			float:left;
+			padding:0;
+			overflow:hidden;
+			img{
+				background:#333;
+				margin:0 auto;
+				max-width:90%;
+				border:1px solid #fff;
+				-webkit-border-radius: 7px;
+				-moz-border-radius: 7px;
+				border-radius: 7px;
+			}
+			img:hover {
+				background:#0074b0;
+			}
+		}
+	}
+}
 
 /* ******************************************
 			Media Queries for screen less than 30em (720px)
 ****************************************** */
 	@media screen and (max-width: 30em) {
 	#container-header {
-		background: #352a38 url("headsmall.jpg") no-repeat top center;
+		background: #352a38 url("https://s3-us-west-2.amazonaws.com/everycupcake/canineup/headsmall.jpg") no-repeat top center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		background-size: cover;
@@ -303,18 +422,13 @@ form {
 			padding:18em 0 0 0;
 			font-size:80%;
 		}
-		#videos {
-			#video-one, #video-two, #video-three {
-				display:none;
-			}
-		}
 	}	
 /* ******************************************
 	Media Queries for screen wider than 30em (480px) for image
 ****************************************** */
 @media screen and (min-width: 30em) {
 	#container-header {
-		background: #352a38 url("headmd.jpg") no-repeat top center;
+		background: #352a38 url("https://s3-us-west-2.amazonaws.com/everycupcake/canineup/headmd.jpg") no-repeat top center;
 		padding:0;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -326,10 +440,45 @@ form {
 		}
 	}
 	#videos {
-		#video-one, #video-two, #video-three {
-			margin: 1.3em auto;
-			padding:0 15%;
+		padding-bottom:3.9em;
+		margin-bottom:1.3em;
+		.video-show {
+			display:block;
+			margin:.39em 0;
+			padding:0.625em 1.3em;
 			width:100%;
+		}
+		#video-nav {
+			color:#fff;
+			ul, li, a {
+				display:block;
+				float:left;
+			}
+			ul  {
+				width:90%;
+				padding-left:0.325em;
+			}
+			li {
+				width: 30%;
+				background: url("https://s3-us-west-2.amazonaws.com/everycupcake/canineup/videoclapup.png") no-repeat center;
+				height:117px;
+				font-size: 1.063em;
+				text-align: center;
+				font-family: "Comic Sans MS";
+				color: #fff;
+				span {
+					display: block;
+					width: 75px;
+					margin: 0 auto;
+					padding-top: 53px;
+				}
+				&:hover {
+					background: url("https://s3-us-west-2.amazonaws.com/everycupcake/canineup/closedclap.png") no-repeat center;
+				}
+			}
+		}
+		.hide {
+			display: none;
 		}
 		h1 {
 			padding-top:0;
@@ -337,6 +486,46 @@ form {
 		}
 		ul {
 			display:none;
+		}
+		.video-title {
+			h1 {
+				margin-left: 10%;
+				margin-top: 0.65em;
+			}
+		}
+	}
+	#photos {
+		overflow:hidden;
+		margin: 0.65em 0.65em;
+		h1 {
+			color:#fff;
+		}
+		h2 {
+			padding-bottom:0.325em;
+			margin-left:0.325em;
+			color:#fff;
+		}
+
+		ul {
+			width:100%;
+			padding: 0;
+			margin: 0;
+		}
+		li {
+			width: 30%;
+			display:inline-block;
+			text-align: center;
+			list-style: none;
+			float: left;
+			margin-bottom:0.65em;
+			margin-left: 3%;
+			img {
+				display:inline-block;
+				max-width:100%;
+				float:left;
+				border: 4px solid #eee;
+
+			}
 		}
 	}
 }
@@ -393,6 +582,52 @@ form {
 	.send {
 		width: 48.6%;
 	}
+	#videos #video-nav li {
+		width:100%;
+	}
+	.video-right {
+		display:block;
+		float:left;
+		margin:1.3em 0em;
+		padding:0.625em 5%;
+		width:65%;
+		#video-one, #video-two, #video-three {
+			width:100%;
+		}
+	}
+	#video-nav{
+		display: block;
+		float:right;
+		margin:0em;
+		margin-top:1.3em;
+		padding:0em;
+		width: 25%;
+		ul {
+			margin-top:0.98em;
+		}
+		li {
+			display:block;
+			margin-bottom: 0.325em;
+			float:left;
+			width:100%;
+		}
+	}
+	#photos {
+		#photo-top {
+			display:block;
+			width:100%;
+			#title-headshots {
+				display:inline-block;
+				float:left;
+				width: 30%;
+			}
+			#photo-nav {
+				display:inline-block;
+				float: right;
+				width: 60%;
+			}
+		}
+	}
 
 }
 
@@ -400,19 +635,46 @@ form {
 	Media Queries for screen wider than 54em (864px)
 ****************************************** */
 @media screen and(min-width: 54em) {
-		#videos {
-		#video-one, #video-two {
-			margin: 1.3em auto;
-			padding:0 5%;
-			width:50%;
-			float:left;
+	#videos {
+		.video-right {
+			width:45%;
 		}
-		#video-three {
-			padding: 0 20%;
-			width:80%;
+		#video-nav{
+			width:45%;
 		}
+	}
+	#photos {
+		overflow:hidden;
+		margin: 0.65em 0.65em;
+		h1 {
+			color:#fff;
+		}
+		h2 {
+			color:#fff;
+			padding-bottom:0.325em;
+		}
+
 		ul {
-			display:none;
+			width:100%;
+			padding: 0;
+			margin: 0;
+		}
+		li {
+			width: 23%;
+			display:inline-block;
+			text-align: center;
+			list-style: none;
+			float: left;
+			margin-bottom:0.65em;
+			padding-top: 0.325em;
+			margin-left: 2%;
+			img {
+				display:inline-block;
+				max-width:100%;
+				float:left;
+				border: 4px solid #eee;
+
+			}
 		}
 	}
 }
@@ -435,22 +697,6 @@ form {
 		}
 	}
 }
-
-
-/* ******************************************
-	Print Styles
-****************************************** */
-@media print and (max-width: 8.5in){
-	#masthead {
-		color:black;
-	}
-	#container-header {
-		height:auto;
-	}
-	#container-footer	{
-		clear:both;
-	}
-}
 	
 	/* Float Clearing http://nicolasgallagher.com/micro-clearfix-hack */
 
@@ -464,6 +710,14 @@ form {
 .group {
 	    *zoom: 1;
 	    }
+ 
+html[xmlns] .clearfix {
+    display: block;
+}
+ 
+* html .clearfix {
+    height: 1%;
+}
 		
 
 /* Figures/Images */
@@ -510,6 +764,49 @@ form {
 		.ie textarea {
 		    *behavior: url("http://www.absolute-path.com/js/boxsizing.htc");
 		}
+#side-nav{
+	display:block;
+	position:fixed;
+	z-index:1000;
+	top:50%;
+	left:10px;
+	width:auto;
+	padding:0;
+	margin-top:-77px;
+	background:#666;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	div{
+		display:block;
+		margin:0;
+		padding:0;
+		div.nav {
+			margin:12px 0;
+			a {
+				display:block;
+				position: relative;
+				width:12px;
+				height:12px;
+				text-indent:100%;
+				white-space:nowrap;
+				overflow:hidden;
+				-moz-border-radius:7px;
+				border-radius:7px;
+				background:#fff;
+				opacity:.5;
+				-webkit-transition:all linear .25s;
+				-moz-transition:all linear .25s;
+				-o-transition:all linear .25s;
+				-ms-transition:all linear .25s;
+				transition:all linear .25s;
+				&:hover, &:focus {
+					opacity:1;
+				}
+			}
+		}
+	}
+}
 
 	
 

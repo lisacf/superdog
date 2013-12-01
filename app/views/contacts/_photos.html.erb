@@ -1,0 +1,76 @@
+<div id="photos">
+	<nav id="side-nav" role="navigation">
+		<div>
+			<div class="nav"><a  href="#happy-photo" title="Happy Headshots">Happy</a></div>
+			<div class="nav"><a  href="#product-photo" title="Product Photos">Commercial</a></div>
+			<div class="nav"><a  href="#action-photo" title="Action Photos">Action</a></div>
+			<div class="nav"><a  href="#comedy-photo" title="Comedy Photos">Comedy</a></div>
+			<div class="nav"><a  href="#drama-photo" title="Dramatic Photos">Dramatic</a></div>
+		</div>
+	</nav>
+	<div id="photo-top" class="group wrapper">
+		<div id="title-headshots"><h1>PHOTOS</h1></div>
+	  <div id="photo-nav">
+	    <ul>
+	        <li><%= link_to image_tag(image_aws("happydog.png")), "#happy-photo" %>Happy</li>
+	        <li><%= link_to image_tag(image_aws("product.png")), "#product-photo"%>Product</li>
+	        <li><%= link_to image_tag(image_aws("action.png")), "#action-photo"%>Action</li>
+	        <li><%= link_to image_tag(image_aws("comedy.png")), "#comedy-photo"%>Comedy</li>
+	        <li><%= link_to image_tag(image_aws("drama.png")), "#drama-photo"%>Drama</li>
+	    </ul>
+	  </div>	
+  </div>
+	<div class="group wrapper" id="happy-photo">
+		<h2>Happy</h2>
+		<ul>
+			<li><%=image_tag image_aws("happy.jpg") %></li>
+			<li><%=image_tag image_aws("happytwo.jpg") %></li>
+			<li><%=image_tag image_aws("alert.jpg") %></li>
+			<li><%=image_tag image_aws("headon.jpg") %></li>
+			<li><%=image_tag image_aws("headshot.jpg") %></li>
+			<li><%=image_tag image_aws("real.jpg") %></li>	
+		</ul>
+	</div>
+	<div class="group wrapper" id="product-photo">
+		<h2>Commercial</h2>
+		<ul>
+			<li><%=image_tag image_aws("barbell.jpg") %></li>
+			<li><%= image_tag image_aws("angrybird1.jpg")%></li>
+			<li><%=image_tag image_aws("angrybird2.jpg") %></li>
+			<li><%=image_tag image_aws("kongad.jpg") %></li>
+			<li><%=image_tag image_aws("ninjatoy.jpg") %></li>
+			<li><%=image_tag image_aws("monkeylove.jpg") %></li>
+		</ul>
+	</div>
+	<div class="group wrapper" id="action-photo">
+		<h2>Action</h2>
+		<ul>
+			<li><%=image_tag image_aws("actiontoy.jpg") %></li>
+			<li><%=image_tag image_aws("midshake.jpg") %></li>
+			<li><%=image_tag image_aws("howl.jpg") %></li>
+			<li><%=image_tag image_aws("predig.jpg") %></li>
+		</ul>
+	</div>
+	<div class="group wrapper" id="comedy-photo">
+		<h2>Comedy</h2>
+		<ul>
+			<li><%=image_tag image_aws("oneeye.jpg") %></li>
+			<li><%=image_tag image_aws("upsidedown2.jpg") %></li>
+			<li><%=image_tag image_aws("worldview.jpg") %></li>
+			<li><%=image_tag image_aws("NOSE.jpg") %></li>
+			<li><%=image_tag image_aws("TreatonNose.jpg") %></li>
+			<li><%=image_tag image_aws("wetdog.jpg") %></li>
+		</ul>
+	</div>
+	<div class="group wrapper" id="drama-photo">
+		<h2>Drama</h2>
+		<ul>
+			<li><%=image_tag image_aws("demure.jpg") %></li>
+			<li><%=image_tag image_aws("serioushalloween.jpg") %></li>
+			<li><%=image_tag image_aws("waiting.jpg") %></li>
+			<li><%=image_tag image_aws("noseart1.jpg") %></li>
+			<li><%=image_tag image_aws("side1.jpg") %></li>
+			<li><%=image_tag image_aws("sleepl.jpg") %></li>
+		</ul>
+	</div>
+</div>
