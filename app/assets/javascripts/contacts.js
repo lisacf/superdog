@@ -5,11 +5,6 @@ $(document).ready(function(){
 		photoBar();
 		videoControl();
 		topNav();
-
-		$('.hover').bind('touchstart touchend', function(e) {
-			e.preventDefault();
-			$(this).toggleClass('hover_effect');
-		});
 	});
 
 photoBar = function() {

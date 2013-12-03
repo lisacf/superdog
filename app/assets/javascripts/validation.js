@@ -19,7 +19,7 @@ $(function() {
 		});
 
 		$('#contact_email').blur(function(){
-			if ($(this).val().match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)) {
+			if ($(this).val().match(/^[a-zA-Z_\.\-]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)) {
 				$("#contact_email").removeClass();
 				$("#emailerror").remove();
 				$("#namespace").remove();
@@ -36,7 +36,6 @@ $(function() {
 				}
 			}
 		});
-		
 		$('#contact_comment').blur(function() { 
 			if ($(this).val().length < 3 ){
 					$("#commenterror").remove();
