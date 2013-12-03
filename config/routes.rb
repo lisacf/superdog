@@ -1,8 +1,9 @@
 Canine::Application.routes.draw do
-  get "static/about"
-  match "/about" => "static#about", via: :get
-  resources :photos
   resources :contacts
+  resources :static, only: :about do
+    collection {get 'about'}
+  end
+  match "/about" => "static#about", via: :get
 
   root to: "contacts#new"
   # The priority is based upon order of creation: first created -> highest priority.

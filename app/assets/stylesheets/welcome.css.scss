@@ -1,3 +1,6 @@
+
+$clapopen:"https://s3-us-west-2.amazonaws.com/everycupcake/canineup/videoclapup.png";
+
 html {
    font-size: 100%;
    line-height: 1;
@@ -9,7 +12,7 @@ html {
 body {
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
-  background: #f3f4f6 url("sand.png") repeat 0 0;
+  background: #f3f4f6 url("https://s3-us-west-2.amazonaws.com/everycupcake/canineup/sand.png") repeat 0 0;
   /* Part of Advanced Checkbox Hack for navigation */
 	-webkit-animation: bugfix infinite 1s; 
 	@-webkit-keyframes bugfix {
@@ -101,24 +104,6 @@ h6 {
 #colophon {
     margin: 0 3.3%;
     }
-#colophon {
-	a {
-		display:block;
-		float:right;
-		color:#fff;
-		text-decoration:none;
-	}
-	a:hover {
-		color:#b74080;
-	}
-}
-.top {
-		display:inline-block;
-		float:right;
-		color:#fff;
-		padding-left:75%;
-		text-decoration:none;
-	}
 #nav {
 	padding: .65em 0;
 	h3 {
@@ -140,9 +125,10 @@ h6 {
 		color: #333;
 		text-decoration: none;
 		padding: 0.975em 1.3em;
-	}
-	a:hover {
-		background: #f8f8f8;
+		&:hover, &:focus, &.hover_effect {
+			background: #333;
+			color:#fff;
+		}
 	}
 	nav {
 		height:0;
@@ -179,6 +165,7 @@ h6 {
 #content,
 #colophon {
    margin: 0 3.3%;
+   padding:0;
  }
  /* VIDEO SECTION STYLE */
  #videos {
@@ -227,7 +214,7 @@ h6 {
 			}
 
 		}
-		a.image:hover {
+		a.image:hover, a.image.hover_effect {
 			background: url("https://s3-us-west-2.amazonaws.com/everycupcake/canineup/closedclap.png") no-repeat center;
 			color:#ddd;
 		}
@@ -242,7 +229,7 @@ h6 {
 	position:fixed;
 	left: 90%;
 	bottom:0px;
-	height:30px;
+	height:2.3em;
 	width:100%;
 	a {
 		color: #eee;
@@ -251,13 +238,16 @@ h6 {
 			color:#b74080;
 		}
 	}
+	a.hover_effect {
+		color:#b74080;
+	}
 }
 
  /* ******************************************
 	   Form Styles Basic Layout
 ****************************************** */
 #container-footer {
-	padding: 32px 0;
+	padding: 1.3em 0;
 	background:#352a38;
 	color:#eee;
 	font-weight:100;
@@ -320,7 +310,7 @@ form {
 	    text-shadow: 0 -1px 1px rgba(0, 0, 0, .65);
 	    }
     
-	.send:hover {
+	.send:hover, .send.hover_effect {
 	    background: #b74080;
 	    }
     
@@ -333,17 +323,19 @@ form {
 
 #photos {
 	overflow:hidden;
-	margin: 0.65em 0.65em;
+	margin: 0.65em 0.325em;
 	h1 {
 		color:#fff;
 		text-shadow: black 0.1em 0.1em 0.2em;
-		padding-left:0.325em;
+		padding:0em;
+		margin-left:0.325em;
 	}
 	h2 {
 		color:#fff;
+		padding:0em;
 		padding-bottom:0.325em;
 		text-shadow: black 0.1em 0.1em 0.2em;
-		padding-left:0.325em;
+		margin-left:0.625em;
 	}
 
 	ul {
@@ -372,16 +364,51 @@ form {
 		padding-bottom:1.3em;
 	}
 }
+/* Photo Credits */ 
+#happy-photo, #product-photo, #drama-photo, #action-photo, #comedy-photo {
+	.insert {
+		display:block;
+		overflow:hidden;
+		width:44%;
+		text-align: center;
+		color: #fff;
+		position:absolute;
+		margin-top:3.9em;
+		padding-top:.95em;
+		padding-bottom:0.65em;
+		font-size:0.95em;
+    opacity:0;
+    transition: all 0.4s ease;
+    &:hover {
+    	opacity:0.7;
+    	background:#0074b0;
+    }
+		p {
+			margin-bottom: 0.325em;
+			font-size:0.95em;
+		}
+		a {
+			font-size:0.95em;
+			color:#fff;
+			white-space:pre;
+			background: #005aa0;
+			text-decoration:none;
+			border:1px solid #fff;
+			border-radius: 7px;
+			padding: 0.325em;
+		}
+	}
+}
+/* Photo Navigation */
 #photo-nav {
 	width: 100%;
 	padding:0;
 	margin:0;
-	margin-left:0.98em;
 	ul {
 		display:block;
 		width:100%;
+		margin-left: 1.95em;
 		float:left;
-		padding:.625em;
 		li {
 			margin:0 auto;
 			text-indent: 100%;
@@ -399,28 +426,46 @@ form {
 				-moz-border-radius: 7px;
 				border-radius: 7px;
 			}
-			img:hover {
+			img:hover, img.hover_effect {
 				background:#0074b0;
 			}
 		}
 	}
 }
 
+.hover {
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;        
+}
+/* ******************************************
+			Media Queries for screen less than 300px
+****************************************** */
+@media screen and (max-width: 320px) {
+		#happy-photo, #product-photo, #drama-photo, #action-photo, #comedy-photo {
+			.insert {
+				font-size:0.87em;
+				a {
+					font-size:0.87em;
+				}
+			}
+		}
+}
+
 /* ******************************************
 			Media Queries for screen less than 30em (720px)
 ****************************************** */
 	@media screen and (max-width: 30em) {
-	#container-header {
-		background: #352a38 url("https://s3-us-west-2.amazonaws.com/everycupcake/canineup/headsmall.jpg") no-repeat top center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		background-size: cover;
-		}
-		.mhtitle {
-			width:100%;
-			height: 30em;
-			padding:18em 0 0 0;
-			font-size:80%;
+		#container-header {
+			background: #352a38 url("https://s3-us-west-2.amazonaws.com/everycupcake/canineup/headsmall.jpg") no-repeat top center;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			background-size: cover;
+			.mhtitle {
+				width:100%;
+				height: 30em;
+				padding:18em 0 0 0;
+				font-size:80%;
+			}
 		}
 	}	
 /* ******************************************
@@ -455,6 +500,7 @@ form {
 				float:left;
 			}
 			ul  {
+				margin-top:0em;
 				width:90%;
 				padding-left:0.325em;
 			}
@@ -472,7 +518,7 @@ form {
 					margin: 0 auto;
 					padding-top: 53px;
 				}
-				&:hover {
+				&:hover, &.hover_effect {
 					background: url("https://s3-us-west-2.amazonaws.com/everycupcake/canineup/closedclap.png") no-repeat center;
 				}
 			}
@@ -496,13 +542,13 @@ form {
 	}
 	#photos {
 		overflow:hidden;
-		margin: 0.65em 0.65em;
+		margin: 0.65em 0.325em;
 		h1 {
 			color:#fff;
 		}
 		h2 {
 			padding-bottom:0.325em;
-			margin-left:0.325em;
+			margin-left:0.65em;
 			color:#fff;
 		}
 
@@ -525,6 +571,45 @@ form {
 				float:left;
 				border: 4px solid #eee;
 
+			}
+		}
+	}
+
+	#happy-photo, #product-photo, #drama-photo, #action-photo, #comedy-photo {
+		.insert {
+			width:30%;
+			margin-top: 4.55em;
+		}
+	}
+	#photo-nav {
+		width: 100%;
+		padding:0;
+		margin:0;
+		ul {
+			display:block;
+			width:100%;
+			margin-left: 1.95em;
+			float:left;
+			li {
+				margin:0 auto;
+				text-indent: 100%;
+				width:18%;
+				display:inline-block;
+				float:left;
+				padding:0;
+				overflow:hidden;
+				img{
+					background:#333;
+					margin:0 auto;
+					max-width:90%;
+					border:1px solid #fff;
+					-webkit-border-radius: 7px;
+					-moz-border-radius: 7px;
+					border-radius: 7px;
+				}
+				img:hover, img.hover_effect {
+					background:#0074b0;
+				}
 			}
 		}
 	}
@@ -613,6 +698,9 @@ form {
 		}
 	}
 	#photos {
+		h2 {
+			margin-left: 0.65em;
+		}
 		#photo-top {
 			display:block;
 			width:100%;
@@ -651,6 +739,7 @@ form {
 		}
 		h2 {
 			color:#fff;
+			margin-left: 0.65em;
 			padding-bottom:0.325em;
 		}
 
@@ -677,6 +766,16 @@ form {
 			}
 		}
 	}
+	#happy-photo, #product-photo, #drama-photo, #action-photo, #comedy-photo {
+		.insert {
+			width:23%;
+			margin-top: 4.5em;
+			font-size: 1em;
+			a {
+				font-size: 1em;
+			}
+		}
+	}
 }
 
 /* ******************************************
@@ -692,8 +791,8 @@ form {
 		background-size: cover;
 		.mhtitle {
 			height:35em;
-			padding:0 0 0 55%;
-			width:100%;
+			padding:0 0 0 50%;
+			width:90%;
 		}
 	}
 }
@@ -762,7 +861,7 @@ html[xmlns] .clearfix {
 		.ie .email,
 		.ie input,
 		.ie textarea {
-		    *behavior: url("http://www.absolute-path.com/js/boxsizing.htc");
+		    *behavior: url("https://s3-us-west-2.amazonaws.com/everycupcake/canineup/js/boxsizing.htc");
 		}
 #side-nav{
 	display:block;
@@ -800,14 +899,12 @@ html[xmlns] .clearfix {
 				-o-transition:all linear .25s;
 				-ms-transition:all linear .25s;
 				transition:all linear .25s;
-				&:hover, &:focus {
+				&:hover, &:focus, &.hover_effect {
 					opacity:1;
 				}
 			}
 		}
 	}
 }
-
-	
 
 

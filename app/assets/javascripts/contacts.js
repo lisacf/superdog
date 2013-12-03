@@ -1,15 +1,15 @@
 $(document).ready(function(){
 		$("#side-nav").hide();
 		$("#toplink").hide();
-		resizeAction();
 		position = $("#headshots").position();
 		photoBar();
 		videoControl();
 		topNav();
-	});
-	
-$(window).resize(function(){
-		resizeAction();
+
+		$('.hover').bind('touchstart touchend', function(e) {
+			e.preventDefault();
+			$(this).toggleClass('hover_effect');
+		});
 	});
 
 photoBar = function() {
@@ -17,7 +17,7 @@ photoBar = function() {
 		$("#side-nav").show();
 		$("#toplink").show();
 		var position = $("#headshots").position();
-		var videostart = $("#videos").position().top
+		var videostart = $("#videos").position().top;
 		var top = position.top + $(window).height();
 		var footer = $("#container-footer").position().top;
 		var bottom_of_window = $(window).scrollTop() + $(window).height();
@@ -26,7 +26,7 @@ photoBar = function() {
 		} else {
 			$("#side-nav").hide();
 		}
-		if (bottom_of_window > footer) {
+		if ((bottom_of_window - 0.25*$(window).height()) > footer) {
 			$("#side-nav").hide();
 		}
 		if (bottom_of_window < videostart) {
@@ -35,14 +35,6 @@ photoBar = function() {
 			$("#toplink").show();
 		}
 	});
-}
-
-resizeAction = function() {
-		var vph = $(window).height();
-		var action = $('#action-photo').height();
-		if (vph > action) {
-			$('#action-photo').height(vph);
-		} 
 }
 
 videoControl = function() {

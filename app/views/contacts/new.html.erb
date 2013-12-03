@@ -9,17 +9,8 @@
 	</header>
 </div>
 <div id="container-content">
-	<div id="videos" class="heightctrl">
-		<div class="video-title group wrapper"> 
-			<%= image_tag image_aws("video-small.png") %><h1>VIDEOS</h1>
-		</div>
-    <div class="video-link">
-	    <ul>
-	      <li><a href="http://youtu.be/4eh2Ahzq4G4" target="_blank" class="image"><span>Swing Dancing Dogs</span></a></li>
-	      <li><a href="http://youtu.be/B7iwv9zbhOQ" target="_blank" class="image"><span>Alligator Impression</span></a></li>
-	      <li><a href="http://youtu.be/VEgWYPYmXys" target="_blank" class="image"><span>Eleven Dog Tricks</span></a></li>
-	  	</ul>
-	  </div>
+	<div id="videos">
+		<%= render 'videophone' %>
   	<div class="video-show">
 			<div class="video-main group wrapper">
 				<%= render 'videos' %>
@@ -32,10 +23,12 @@
 </div>
 
 <div id="container-footer">
-	<%= render 'form' %>
-
+	<div id="contact">
+		<%= render 'form' %>
+	</div>
 	<footer id="colophon" class="wrapper">
+		<p>by Lisa Friedman</p>
 		<p>©2013 all rights reserved. </p>
 	</footer>
-	<div id="toplink"><a href="#nav">TOP</a></div>
+	<div id="toplink"><a href="#nav" class="hover">TOP</a></div>
 </div>	

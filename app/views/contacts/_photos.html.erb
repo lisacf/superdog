@@ -12,65 +12,161 @@
 		<div id="title-headshots"><h1>PHOTOS</h1></div>
 	  <div id="photo-nav">
 	    <ul>
-	        <li><%= link_to image_tag(image_aws("happydog.png")), "#happy-photo" %>Happy</li>
-	        <li><%= link_to image_tag(image_aws("product.png")), "#product-photo"%>Product</li>
-	        <li><%= link_to image_tag(image_aws("action.png")), "#action-photo"%>Action</li>
-	        <li><%= link_to image_tag(image_aws("comedy.png")), "#comedy-photo"%>Comedy</li>
-	        <li><%= link_to image_tag(image_aws("drama.png")), "#drama-photo"%>Drama</li>
+	        <li><%= link_to image_tag(image_aws("happydog.png")), "#happy-photo", class:"hover"%>Happy</li>
+	        <li><%= link_to image_tag(image_aws("product.png")), "#product-photo", class:"hover"%>Product</li>
+	        <li><%= link_to image_tag(image_aws("action.png")), "#action-photo", class:"hover"%>Action</li>
+	        <li><%= link_to image_tag(image_aws("comedy.png")), "#comedy-photo", class:"hover"%>Comedy</li>
+	        <li><%= link_to image_tag(image_aws("drama.png")), "#drama-photo", class:"hover"%>Drama</li>
 	    </ul>
 	  </div>	
   </div>
 	<div class="group wrapper" id="happy-photo">
 		<h2>Happy</h2>
 		<ul>
-			<li><%=image_tag image_aws("happy.jpg") %></li>
-			<li><%=image_tag image_aws("happytwo.jpg") %></li>
-			<li><%=image_tag image_aws("alert.jpg") %></li>
-			<li><%=image_tag image_aws("headon.jpg") %></li>
-			<li><%=image_tag image_aws("headshot.jpg") %></li>
-			<li><%=image_tag image_aws("real.jpg") %></li>	
+			<li><%=image_tag image_aws("happy.jpg") %>
+				<div class="insert"><p>Photo by</p> <a>Lisa Friedman</a></div>
+			</li>
+			<li>
+				<%=image_tag image_aws("happytwo.jpg") %>
+				<div class="insert"><p>Photo by</p> <a>Lisa Friedman</a></div>
+			</li>
+			<li>
+				<%=image_tag image_aws("alert.jpg") %>
+				<div class="insert"><p>Photo by</p><%= link_to "Sam Willard", "http://www.samwillardphoto.com/", class: "photo-btn", target: "_blank" %></div>	
+			</li>
+			<li>
+				<%=image_tag image_aws("headon.jpg") %>
+				<div class="insert"><p>Photo by</p> <a>Lisa Friedman</a></div>
+			</li>
+			<li>
+				<%=image_tag image_aws("headshot.jpg") %>
+				<div class="insert"><p>Photo by</p><%= link_to "Sam Willard", "http://www.samwillardphoto.com/", class: "photo-btn", target: "_blank" %></div>
+			</li>
+			<li>
+				<%=image_tag image_aws("real.jpg") %>
+				<div class="insert"><p>Photo by</p> <a>Lisa Friedman</a></div>
+			</li>	
 		</ul>
 	</div>
 	<div class="group wrapper" id="product-photo">
 		<h2>Commercial</h2>
 		<ul>
-			<li><%=image_tag image_aws("barbell.jpg") %></li>
-			<li><%= image_tag image_aws("angrybird1.jpg")%></li>
-			<li><%=image_tag image_aws("angrybird2.jpg") %></li>
-			<li><%=image_tag image_aws("kongad.jpg") %></li>
-			<li><%=image_tag image_aws("ninjatoy.jpg") %></li>
-			<li><%=image_tag image_aws("monkeylove.jpg") %></li>
+			<li>
+				<%=image_tag image_aws("barbell.jpg") %>
+				<div class="insert"><p>Photo by</p><%= link_to "Sam Willard", "http://www.samwillardphoto.com/", class: "photo-btn", target: "_blank" %></div>
+			</li>
+			<li>
+				<%= image_tag image_aws("angrybird1.jpg")%>
+				<div class="insert"><p>Photo by</p> <a>Lisa Friedman</a></div>
+			</li>
+			<li>
+				<%=image_tag image_aws("angrybird2.jpg") %>
+				<div class="insert"><p>Photo by</p> <a>Lisa Friedman</a></div>
+			</li>
+			<li>
+				<%=image_tag image_aws("kongad.jpg") %>
+				<div class="insert"><p>Photo by</p><%= link_to "Alessandro DeSogos", "http://doggieportrait.com/", class: "photo-btn", target: "_blank" %>
+				</div>
+			</li>
+			<li>
+				<%=image_tag image_aws("ninjatoy.jpg") %>
+				<div class="insert"><p>Photo by</p> <a>Lisa Friedman</a></div>
+			</li>
+			<li>
+				<%=image_tag image_aws("monkeylove.jpg") %>
+				<div class="insert"><p>Photo by</p> <a>Lisa Friedman</a></div>
+			</li>
 		</ul>
 	</div>
 	<div class="group wrapper" id="action-photo">
 		<h2>Action</h2>
 		<ul>
-			<li><%=image_tag image_aws("actiontoy.jpg") %></li>
-			<li><%=image_tag image_aws("midshake.jpg") %></li>
-			<li><%=image_tag image_aws("howl.jpg") %></li>
-			<li><%=image_tag image_aws("predig.jpg") %></li>
+			<li>
+				<%=image_tag image_aws("actiontoy.jpg") %>
+				<div class="insert"><p>Photo by</p><%= link_to "Alessandro DeSogos", "http://doggieportrait.com/", class: "photo-btn", target: "_blank" %>
+				</div>
+			</li>
+			<li>
+				<%=image_tag image_aws("midshake.jpg") %>
+				<div class="insert"><p>Photo by</p><%= link_to "Alessandro DeSogos", "http://doggieportrait.com/", class: "photo-btn", target: "_blank" %>
+				</div>
+			</li>
+			<li>
+				<%=image_tag image_aws("howl.jpg") %>
+				<div class="insert"><p>Photo by</p><%= link_to "Sam Willard", "http://www.samwillardphoto.com/", class: "photo-btn", target: "_blank" %></div>
+			</li>
+			<li>
+				<%=image_tag image_aws("predig.jpg") %>
+				<div class="insert"><p>Photo by</p><%= link_to "Alessandro DeSogos", "http://doggieportrait.com/", class: "photo-btn", target: "_blank" %>
+				</div>
+			</li>
+			<li>
+				<%=image_tag image_aws("wave.jpg") %>
+				<div class="insert"><p>Photo by</p> <a>Lisa Friedman</a></div>
+			</li>
+			<li>
+				<%=image_tag image_aws("jump.jpg") %>
+				<div class="insert"><p>Photo by</p><%= link_to "Sam Willard", "http://www.samwillardphoto.com/", class: "photo-btn", target: "_blank" %></div>
+			</li>
 		</ul>
 	</div>
 	<div class="group wrapper" id="comedy-photo">
 		<h2>Comedy</h2>
 		<ul>
-			<li><%=image_tag image_aws("oneeye.jpg") %></li>
-			<li><%=image_tag image_aws("upsidedown2.jpg") %></li>
-			<li><%=image_tag image_aws("worldview.jpg") %></li>
-			<li><%=image_tag image_aws("NOSE.jpg") %></li>
-			<li><%=image_tag image_aws("TreatonNose.jpg") %></li>
-			<li><%=image_tag image_aws("wetdog.jpg") %></li>
+			<li>
+				<%=image_tag image_aws("oneeye.jpg") %>
+				<div class="insert"><p>Photo by</p> <a>Lisa Friedman</a></div>
+			</li>
+			<li>
+				<%=image_tag image_aws("upsidedown2.jpg") %>
+				<div class="insert"><p>Photo by</p><%= link_to "Sam Willard", "http://www.samwillardphoto.com/", class: "photo-btn", target: "_blank" %></div>
+			</li>
+			<li>
+				<%=image_tag image_aws("worldview.jpg") %>
+				<div class="insert"><p>Photo by</p> <a>Lisa Friedman</a></div>
+			</li>
+			<li>
+				<%=image_tag image_aws("NOSE.jpg") %>
+				<div class="insert"><p>Photo by</p> <a>Lisa Friedman</a></div>
+			</li>
+			<li>
+				<%=image_tag image_aws("TreatonNose.jpg") %>
+				<div class="insert"><p>Photo by</p> <a>Lisa Friedman</a></div>
+			</li>
+			<li>
+				<%=image_tag image_aws("wetdog.jpg") %>
+				<div class="insert"><p>Photo by</p><%= link_to "Alessandro DeSogos", "http://doggieportrait.com/", class: "photo-btn", target: "_blank" %>
+				</div>
+			</li>
 		</ul>
 	</div>
 	<div class="group wrapper" id="drama-photo">
 		<h2>Drama</h2>
 		<ul>
-			<li><%=image_tag image_aws("demure.jpg") %></li>
-			<li><%=image_tag image_aws("serioushalloween.jpg") %></li>
-			<li><%=image_tag image_aws("waiting.jpg") %></li>
-			<li><%=image_tag image_aws("noseart1.jpg") %></li>
-			<li><%=image_tag image_aws("side1.jpg") %></li>
-			<li><%=image_tag image_aws("sleepl.jpg") %></li>
+			<li>
+				<%=image_tag image_aws("demure.jpg") %>
+				<div class="insert"><p>Photo by</p> <a>Lisa Friedman</a></div>
+			</li>
+			<li>
+				<%=image_tag image_aws("serioushalloween.jpg") %>
+				<div class="insert"><p>Photo by</p> <a>Lisa Friedman</a></div>
+			</li>
+			<li>
+				<%=image_tag image_aws("waiting.jpg") %>
+				<div class="insert"><p>Photo by</p> <a>Lisa Friedman</a></div>
+			</li>
+			<li>
+				<%=image_tag image_aws("noseart1.jpg") %>
+				<div class="insert"><p>Photo by</p> <a>Lisa Friedman</a></div>
+			</li>
+			<li>
+				<%=image_tag image_aws("side1.jpg") %>
+				<div class="insert"><p>Photo by</p> <a>Lisa Friedman</a></div>
+			</li>
+			<li>
+				<%=image_tag image_aws("sleepl.jpg") %>
+				<div class="insert"><p>Photo by</p> <a>Lisa Friedman</a></div>
+			</li>
 		</ul>
 	</div>
 </div>

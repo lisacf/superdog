@@ -20,6 +20,8 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
+        ContactMailer.email_confirmation(@contact).deliver
+        ContactMailer.email_forward(@contact).deliver 
         format.html do 
           flash[:notice]='BOW WOW! Thanks for the message.'
           redirect_to root_path
