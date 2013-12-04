@@ -55,11 +55,12 @@ $(function() {
 				$("#senderror").remove();
 				confirm("Ready to send?");
 			} else {
+				event.preventDefault();
 				if ($('#senderror').text()) {
+
 				} else {
 					$("#submit-form-btn").before("<p id='senderror' class='error'>Please complete form before sending!</p>");
 				}
-				event.preventDefault();
 			}
 		});
 })
