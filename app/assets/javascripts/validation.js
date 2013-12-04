@@ -49,7 +49,7 @@ $(function() {
 		});
 		$("#new_contact").submit(function(event){
 			var name = $("#contact_name").val().length
-			var email = $("#contact_email").val().match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)
+			var email = $("#contact_email").val().match(/[@]/)
 			var comment = $("#contact_comment").val().length
 			if (( name > 2) && email && (comment > 2) ){
 				$("#senderror").remove();
