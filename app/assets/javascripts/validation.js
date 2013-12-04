@@ -19,7 +19,7 @@ $(function() {
 		});
 
 		$('#contact_email').blur(function(){
-			if ($(this).val().match(/^[a-zA-Z_\.\-]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)) {
+			if ($(this).val().match(/[@]/)) {
 				$("#contact_email").removeClass();
 				$("#emailerror").remove();
 				$("#namespace").remove();
@@ -55,8 +55,11 @@ $(function() {
 				$("#senderror").remove();
 				confirm("Ready to send?");
 			} else {
+				if ($('#senderror').text()) {
+				} else {
+					$("#submit-form-btn").before("<p id='senderror' class='error'>Please complete form before sending!</p>");
+				}
 				event.preventDefault();
-				$("#submit-form-btn").before("<p id='senderror' class='error'>Please complete form before sending!</p>");
 			}
 		});
 })
