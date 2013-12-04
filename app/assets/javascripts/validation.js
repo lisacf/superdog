@@ -57,7 +57,7 @@ $(function() {
 			} else {
 				event.preventDefault();
 				if ($('#senderror').text()) {
-
+					alert("Try again!")
 				} else {
 					$("#submit-form-btn").before("<p id='senderror' class='error'>Please complete form before sending!</p>");
 				}
